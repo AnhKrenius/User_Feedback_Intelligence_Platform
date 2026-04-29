@@ -1,0 +1,17 @@
+flowchart LR
+  A[Product release (UI update)] --> B[User engagement signals]
+  A --> C[External feedback (social posts & comments)]
+
+  B --> D[Cleaning & validation]
+  C --> D
+
+  D --> E[Integrated dataset (thread-level)]
+  E --> F[LLM-assisted sentiment + topic classification]
+  E --> G[Weighted scoring (engagement-weighted)]
+
+  F --> H[Metrics & monitoring (24–48h post-release)]
+  G --> H
+
+  H --> I[Interactive dashboard (web)]
+  I --> J[Weekly insights + docs for Growth/Product]
+

@@ -1,0 +1,9 @@
+release_date,release_type,feature_area,description
+2025-06-10,major,UI,"Home redesign; Continue watching row moved; stronger promo carousels."
+2025-07-22,minor,performance,"Cold start and memory use reduced on TV clients after long sessions."
+2025-08-14,major,pricing,"Annual plan adjustment; tax-inclusive price display at checkout."
+2025-09-03,hotfix,bugs,"Wishlist sync edge cases; living-room login session TTL relaxed."
+2025-10-01,minor,catalog,"Regional metadata expansion; temporary delist during license rollover."
+2025-11-18,major,onboarding,"Shorter trial; added verification steps; stronger renewal reminders."
+2026-02-04,minor,UI,"Credits skip default opt-in; spoiler-aware toggle after feedback."
+2026-03-12,hotfix,performance,"Peak-hour CDN ladder tuning; fewer bitrate drops on congested links."
