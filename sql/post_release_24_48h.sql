@@ -1,8 +1,3 @@
--- App2-shaped example (PostgreSQL)
--- Threads whose anchor submission falls in [release + 24h, release + 48h) UTC window.
--- Map CSV files → tables: sample_demo_release_events → demo_release_events;
---   sample_submissions → submissions; sample_threads → threads.
-
 WITH anchor AS (
   SELECT
     r.release_date::date AS release_date,
