@@ -1,7 +1,3 @@
--- App2-shaped example (PostgreSQL)
--- Mirrors portfolio CSV columns: demo internal daily + submissions
--- Adjust table names if you materialize these from CSV.
-
 WITH internal_week AS (
   SELECT
     date_trunc('week', date::date) AS week,
