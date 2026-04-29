@@ -1,21 +1,9 @@
-# Data dictionary (App2-aligned)
-
-All CSVs under `github/data/` are **synthetic portfolio samples**. Their columns match the shapes produced in the App2 demo code:
-
-| Source in repo (not published on GitHub) | What it defines |
-|---|---|
-| `app/app2/mockData.ts` | `FAKE_SUBMISSIONS`, `FAKE_COMMENTS`, `FAKE_THREADS` |
-| `app/app2/demoProductIntelligence.ts` | `DemoInternalMetricRow`, `DemoReleaseEvent` |
-
-The live demo builds charts from the same field names (plus UI-only derivations like `created_time` from `created_utc` in **Detail view**).
-
----
+# Data dictionary 
+All CSVs under `github/data/` are **synthetic portfolio samples**. Their columns match the shapes produced in the app code.
 
 ## `data/sample_submissions.csv`
 
 **Grain:** one row = one Reddit submission (post) in the demo model.
-
-**Canonical fields** (same keys as objects in `FAKE_SUBMISSIONS` after `stripInternalFields` in `mockData.ts`):
 
 | Column | Type | Description |
 |---|---|---|
@@ -32,8 +20,6 @@ The live demo builds charts from the same field names (plus UI-only derivations 
 | `subreddit` | string | Source “community” name (matches `DEMO_FILTER_HINTS.subreddits` style). |
 | `url` | string | Demo absolute URL prefix `https://example.com/demo` + `permalink`. |
 
-**Not included** (exists only inside the generator before strip): `_commentCount`.
-
 **UI note:** Detail view shows **Created** from `created_utc` when `created_time` is absent.
 
 ---
@@ -41,8 +27,6 @@ The live demo builds charts from the same field names (plus UI-only derivations 
 ## `data/sample_comments.csv`
 
 **Grain:** one row = one comment on a submission.
-
-**Canonical fields** (same keys as `FAKE_COMMENTS` in `mockData.ts`):
 
 | Column | Type | Description |
 |---|---|---|
@@ -61,8 +45,6 @@ The live demo builds charts from the same field names (plus UI-only derivations 
 ## `data/sample_threads.csv`
 
 **Grain:** one row = one **thread** row aligned to a submission (used for thread-level charts and the **Threads** tab in Detail view).
-
-**Canonical fields** (same keys as `FAKE_THREADS` from `buildThreads()` in `mockData.ts`):
 
 | Column | Type | Description |
 |---|---|---|
@@ -91,8 +73,6 @@ The live demo builds charts from the same field names (plus UI-only derivations 
 
 **Grain:** one row = **one day** of illustrative internal product metrics (Delivery & experience narrative).
 
-**Canonical fields** (same as `DemoInternalMetricRow` in `demoProductIntelligence.ts`):
-
 | Column | Type | Description |
 |---|---|---|
 | `date` | date | `YYYY-MM-DD` within the demo storyline window (`DEMO_INTEL_RANGE` in code). |
@@ -105,8 +85,7 @@ The live demo builds charts from the same field names (plus UI-only derivations 
 
 ## `data/sample_demo_release_events.csv`
 
-**Grain:** one row = one modeled **release milestone** (same content as `DEMO_RELEASE_EVENTS` in `demoProductIntelligence.ts`).
-
+**Grain:** one row = one modeled **release milestone** 
 | Column | Type | Description |
 |---|---|---|
 | `release_date` | date | `YYYY-MM-DD`. |
