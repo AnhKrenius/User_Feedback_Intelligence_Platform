@@ -1,7 +1,4 @@
-# Dashboard walkthrough (matches App2 UI)
-
-This walkthrough follows the **actual layout and headings** on the live demo:  
-`https://justwatch.australscience.com` (App2 **Executive view**).
+# Dashboard walkthrough
 
 **Data note:** the demo uses **fake / synthetic data** for showcasing.
 
@@ -23,8 +20,6 @@ This walkthrough follows the **actual layout and headings** on the live demo:
 ---
 
 ## Filters (top card)
-
-Use these in this order when demoing to someone non-technical:
 
 1. **Period** — presets: Last 7 Days, Last 30 Days, This Month, Last Month, YTD, Last 12 Months, All Time, Custom Range.
 2. **Data refreshed** — shows when the demo dataset was last “refreshed” (synthetic).
@@ -116,14 +111,3 @@ From the top nav, open **Detail view** when you want to show **tabular QA** (sor
 ---
 
 ## Screenshots in `screenshots/`
-
-Name files however you like; a practical set that mirrors the page:
-
-- `01_header_filters.png` — title + Period + Topic/Source + View by + Refresh/Reset
-- `02_at_a_glance.png` — summary + both tables under At a glance
-- `03_delivery_narrative.png` — milestones + daily pulse + insight blocks
-- `04_tone_threads_posts_comments.png` — the three tone charts (can be one tall capture)
-- `05_language_tone_mix.png` — word cloud + pie
-- `06_guided_narrative.png` — Guided narrative section
-
-You already have a full-page capture (PostgreSQL Data Viewer screenshot) — that works as **`04_tone_threads_posts_comments.png`** style coverage if you rename it for clarity.
