@@ -1,8 +1,4 @@
-# Data quality & validation checks (App2 demo)
-
-Checklist aligned with fields used in **App2** (`app/app2/mockData.ts`, `app/app2/filterMock.ts`, `app/app2/page.tsx`). Use it when extending the portfolio CSVs or when explaining QA in interviews.
-
----
+# Data quality & validation checks
 
 ## 1) Schema & keys (submissions)
 
@@ -57,7 +53,7 @@ Thread rows (`sample_threads.csv`) must align to a submission:
 
 ---
 
-## 6) Metric sanity (App2-specific)
+## 6) Metric sanity
 
 - **Weight domination:** post/comment weights use `log(1 + score)` — spot-check extreme scores still produce finite weights.
 - **“Conversations that deserve a look”:** verify negative + `log(1+score) > 5` + `num_comments > 50` still surfaces a small, explainable set.
