@@ -1,18 +1,6 @@
-# Metric definitions (App2 demo)
-
-These definitions match how **App2** (`/app2`) explains metrics in the UI. They align with:
-
-- `app/app2/page.tsx` — chart aggregations, tooltips, “Conversations that deserve a look”
-- `app/app2/mockData.ts` — `FAKE_SUBMISSIONS`, `FAKE_COMMENTS`, `FAKE_THREADS`
-- `app/app2/demoProductIntelligence.ts` — modeled internal daily metrics + release milestones
-
-Portfolio CSVs under `github/data/` use the **same column names** as those structures.
-
----
+# Metric definitions 
 
 ## 1) Internal product metrics (Delivery & experience narrative)
-
-Source shape: `DemoInternalMetricRow` → `sample_demo_internal_daily.csv`.
 
 | Field / UI label | Definition |
 |---|---|
@@ -22,13 +10,10 @@ Source shape: `DemoInternalMetricRow` → `sample_demo_internal_daily.csv`.
 | `avg_session_duration` | Average session length in **minutes** (“Average visit length”). |
 | `churn_signal` | `low` \| `medium` \| `high` internal signal; displayed as **Retention read**: Stable / Elevated / Priority. |
 
-Release overlays use `sample_demo_release_events.csv` (`release_date`, `release_type`, `feature_area`, `description`) as vertical guides in the chart.
-
 ---
 
 ## 2) Public voice — submissions (posts)
 
-Source shape: `sample_submissions.csv` (same keys as `FAKE_SUBMISSIONS`).
 
 | Concept | Definition |
 |---|---|
@@ -43,8 +28,6 @@ Source shape: `sample_submissions.csv` (same keys as `FAKE_SUBMISSIONS`).
 
 ## 3) Public voice — comments
 
-Source shape: `sample_comments.csv` (same keys as `FAKE_COMMENTS`).
-
 | Field | Definition |
 |---|---|
 | `link_id` | Parent submission id with prefix `t3_` + `demo_<n>`. |
@@ -55,8 +38,6 @@ Source shape: `sample_comments.csv` (same keys as `FAKE_COMMENTS`).
 ---
 
 ## 4) Thread-level metrics
-
-Source shape: `sample_threads.csv` (same keys as `FAKE_THREADS`).
 
 | Field | Definition |
 |---|---|
@@ -83,7 +64,7 @@ Tooltips report:
 
 ## 6) “Conversations that deserve a look”
 
-Demo rule on submissions (high reach + high discussion + critical tone):
+Rule on submissions (high reach + high discussion + critical tone):
 
 - `sentiment_advanced === 'negative'`
 - `ln(1 + score) > 5` (very high engagement proxy)
